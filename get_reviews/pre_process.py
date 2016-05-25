@@ -6,7 +6,8 @@ from nltk.stem import PorterStemmer
 import re
 from gensim import corpora, models, similarities
 from gensim.models.ldamodel import LdaModel
-
+import pyLDAvis
+from pyLDAvis.gensim import prepare
 
 class ReviewNormalizer(object):
     def __init__(self):
@@ -59,6 +60,7 @@ def get_rate_setter_dictionary_corpus():
     corpus = [dictionary.doc2bow(r)
               for r in normalized_reviews]
     return dictionary, corpus
+
 
 
 
