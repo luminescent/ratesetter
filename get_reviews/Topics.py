@@ -47,27 +47,6 @@ corpus = [dictionary.doc2bow(r)
 lda = LdaModel(corpus=corpus, num_topics=5, id2word=dictionary, passes=100)
 
 
-# In[16]:
-
-print(dictionary)
-#print(corpus)
-
-
-# In[8]:
-
-lda = LdaModel(corpus=corpus, num_topics=5, id2word=dictionary, passes=100)
-
-
-# In[10]:
-
-lda.print_topics()
-
-
-# In[11]:
-
-dictionary[lda.get_topic_terms(0)[0][0]]
-
-
 # #### Prepare data and visualize!
 
 # In[14]:
